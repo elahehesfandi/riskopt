@@ -14,8 +14,7 @@ library(readxl)
 # Package ceRtainty
 # Certainty equivalent computation method
 
-dataopt<-read_excel("dataopt.xlsx")
-datagg<-read_excel("datagg.xlsx")
+
 
 shinyUI <- fluidPage(
     
