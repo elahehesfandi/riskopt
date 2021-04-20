@@ -13,10 +13,14 @@ library(readxl)
 # Package ceRtainty
 # Certainty equivalent computation method
 
-dataopt<-read_excel("opt.xls", sheet = "opt")
-datagg<-read_excel("gg.xls",sheet = "gg")
+opt <- read_excel("opt.xlsx", 
+                  col_types = c("numeric", "numeric", "numeric", 
+                                "numeric"))
+gg <- read_excel("gg.xlsx", 
+                 col_types = c("date", "numeric", "numeric", 
+                               "numeric", "numeric"))
 
-dataset <- dataopt
+dataset <- opt
 
 # Define server logic required to draw a histogram
 shinyServer <- function(input, output) {
@@ -67,7 +71,7 @@ shinyServer <- function(input, output) {
     
     output$myplot <- renderPlot({
         req(input$asset)
-        ggplot(data = datagg)+geom_line(aes_string(x = "year", y = input$asset))
+        ggplot(data = gg)+geom_line(aes_string(x = "year", y = input$asset))
         
     })
     
