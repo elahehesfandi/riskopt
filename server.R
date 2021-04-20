@@ -13,8 +13,8 @@ library(readxl)
 # Package ceRtainty
 # Certainty equivalent computation method
 
-dataopt<-read_excel("C:/Users/unimi/Documents.xls", sheet = "opt")
-datagg<-read_excel("C:/Users/unimi/Documents.xls",sheet = "gg")
+dataopt<-read_excel("opt.xls", sheet = "opt")
+datagg<-read_excel("gg.xlsx",sheet = "gg")
 
 dataset <- dataopt
 
