@@ -14,7 +14,7 @@ library(readxl)
 # Certainty equivalent computation method
 
 dataopt<-read_excel("opt.xls", sheet = "opt")
-datagg<-read_excel("gg.xlsx",sheet = "gg")
+datagg<-read_excel("gg.xls",sheet = "gg")
 
 dataset <- dataopt
 
